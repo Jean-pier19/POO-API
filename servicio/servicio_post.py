@@ -1,9 +1,11 @@
 import requests
-from auxiliares.URL import url_post
+import negocio.procesar_url as negocio_url
 
-def consultar_api_post():
-    URL = url_post 
-    respuesta = requests.get(URL)
 
+def obtener_api_post():
+    url = negocio_url.url_tipo("post")
+
+    respuesta = requests.get(url)
+    print(respuesta)
     if respuesta.status_code == 200:
         return respuesta.json()

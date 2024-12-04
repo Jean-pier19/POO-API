@@ -1,2 +1,2 @@
-from servicio.servicio_post import consultar_post
-consultar_post()
+from servicio.servicio_post import obtener_api_post
+obtener_api_post()
