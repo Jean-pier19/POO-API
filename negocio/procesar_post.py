@@ -13,6 +13,13 @@ def procesar_datos_post():
         nueva_publicacion.id = publi['id']
         nueva_publicacion.title = publi['title']
         nueva_publicacion.body = publi['body']
-        post.append(nueva_publicacion)
+        # post.append(nueva_publicacion)
 
+        crear_diccionario = {
+            'userId': nueva_publicacion.userId,
+            'id': nueva_publicacion.id,
+            'title': nueva_publicacion.title,
+            'body': nueva_publicacion.body 
+        } 
+        post.append(crear_diccionario)
     print(post)
