@@ -1,5 +1,5 @@
 class Comments():
-    def __init__(self,postId,id,name,email,body):
+    def __init__(self,postId=0, id=0, name='', email='',body=''):
         self.postId = postId
         self.id = id
         self.name = name
