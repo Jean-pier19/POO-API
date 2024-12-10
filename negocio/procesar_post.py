@@ -3,10 +3,10 @@ from servicio.servicio_post import obtener_api_post
 
 
 def procesar_datos_post():
-    publicacion = obtener_api_post
+    publicacion = obtener_api_post()
     post = [Posts()]
 
-    for publi in publicacion():
+    for publi in publicacion:
         
         nueva_publicacion = Posts()
         nueva_publicacion.userId = publi['userId']
@@ -15,11 +15,11 @@ def procesar_datos_post():
         nueva_publicacion.body = publi['body']
         
 
-        crear_dict = {
-            'userId': nueva_publicacion.userId,
-            'id': nueva_publicacion.id,
-            'title': nueva_publicacion.title,
-            'body': nueva_publicacion.body 
-        } 
-        post.append(crear_dict)
+        # crear_dict = {
+        #     'userId': nueva_publicacion.userId,
+        #     'id': nueva_publicacion.id,
+        #     'title': nueva_publicacion.title,
+        #     'body': nueva_publicacion.body 
+        # } 
+        post.append(nueva_publicacion)
     print(post)
