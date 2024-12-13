@@ -13,11 +13,5 @@ def procesar_comments():
         nuevo_comentario.email = coment['email']
         nuevo_comentario.body = coment['body']
 
-        crear_dict = {
-            'postId': nuevo_comentario.postId,
-            'id': nuevo_comentario.id,
-            'email': nuevo_comentario.email,
-            'body': nuevo_comentario.body
-        }
-        comments.append(crear_dict)
+        coments.append(nuevo_comentario)
     print(comments)

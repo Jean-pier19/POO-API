@@ -14,12 +14,5 @@ def procesar_datos_post():
         nueva_publicacion.title = publi['title']
         nueva_publicacion.body = publi['body']
         
-
-        # crear_dict = {
-        #     'userId': nueva_publicacion.userId,
-        #     'id': nueva_publicacion.id,
-        #     'title': nueva_publicacion.title,
-        #     'body': nueva_publicacion.body 
-        # } 
         post.append(nueva_publicacion)
     print(post)
