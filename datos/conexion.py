@@ -1,12 +1,13 @@
 import mysql.connector
 from mysql.connector import errorcode
+from auxiliares.config_db import user, password, host, database
 
 def crear_conexion():
     config = {
-        'user': 'root',
-        'password': '',
-        'host': 'localhost',
-        'database': 'base datos api'
+        'user': user,
+        'password': password,
+        'host': host,
+        'database': database
     }
     try:
         conexion = mysql.connector.connect(**config)

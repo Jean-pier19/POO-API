@@ -15,4 +15,4 @@ def procesar_datos_post():
         nueva_publicacion.body = publi['body']
         
         post.append(nueva_publicacion)
-    print(post)
+    return post
