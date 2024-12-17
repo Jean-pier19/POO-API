@@ -13,12 +13,11 @@ def insertar_post():
     """
 
     data_post = []
-    contador = 0
+    
     for publi in posts_data:
-        contador += 1
         data_post.append((publi.userId, publi.id, publi.title, publi.body))
         
-    print("Datos a insertar:", data_post)
+    print("Datos insertados:", data_post)
 
     insertar_multiples_datos(insertar_post, data_post)
 
