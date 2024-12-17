@@ -43,7 +43,7 @@ def enviar_dato_post():
     respuesta = requests.post(url, data=nuevo_post)
     if respuesta.status_code == 201: 
         print("Post creado.")
-        print("Respuesta del servidor:", respuesta.json()) 
+        print(respuesta.json()) 
     else:
         print(f"Error al crear el post: {respuesta.status_code}")
 

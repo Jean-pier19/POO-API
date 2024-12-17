@@ -42,9 +42,10 @@ def enviar_dato_comment():
 
     url = url_tipo("comments")
     respuesta = requests.post(url, data=nuevo_comment)
+    
     if respuesta.status_code == 201: 
-        print("Comment creado exitosamente.")
-        print("Respuesta del servidor:", respuesta.json()) 
+        print("Comment creado")
+        print(respuesta.json()) 
     else:
         print(f"Error al crear el comment: {respuesta.status_code}")
 
